@@ -36,9 +36,9 @@ func (pm *basePackageManager) Upgrade() error {
 	return err
 }
 
-// ListAvailable is defined on the PackageManager interface.
-func (pm *basePackageManager) ListAvailable() (string, error) {
-	packages, err := RunCommand(pm.cmder.ListAvailableCmd(), nil)
+// ListInstalled is defined on the PackageManager interface.
+func (pm *basePackageManager) ListInstalled() (string, error) {
+	packages, err := RunCommand(pm.cmder.ListInstalledCmd(), nil)
 	return packages, err
 }
 
