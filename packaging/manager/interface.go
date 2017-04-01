@@ -25,6 +25,8 @@ type PackageManager interface {
 	// Upgrade runs the command which issues an upgrade on all packages
 	// with available newer versions.
 	Upgrade() error
+	
+	ListInstalled() (string, error)
 
 	// Install runs a *single* command that installs the given package(s).
 	Install(packs ...string) error
